@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "team_positions",
+  "info": {
+    "singularName": "team-position",
+    "pluralName": "team-positions",
+    "displayName": "TeamPosition",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "teamPositionName": {
+      "type": "string"
+    },
+    "teamPositionDescription": {
+      "type": "text"
+    },
+    "team_members": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::team-member.team-member",
+      "mappedBy": "team_position"
+    }
+  }
+}

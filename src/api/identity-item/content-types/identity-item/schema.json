@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "identity_items",
+  "info": {
+    "singularName": "identity-item",
+    "pluralName": "identity-items",
+    "displayName": "IdentityItem",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "identityItemName": {
+      "type": "string"
+    },
+    "identityItemValue": {
+      "type": "string"
+    }
+  }
+}

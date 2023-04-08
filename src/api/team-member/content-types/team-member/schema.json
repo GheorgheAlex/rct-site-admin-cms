@@ -1,0 +1,58 @@
+{
+  "kind": "collectionType",
+  "collectionName": "team_members",
+  "info": {
+    "singularName": "team-member",
+    "pluralName": "team-members",
+    "displayName": "TeamMember"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "teamMemberName": {
+      "type": "string"
+    },
+    "teamMemberImageSource": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "teamMemberInstagram": {
+      "type": "string"
+    },
+    "teamMemberQuote": {
+      "type": "text"
+    },
+    "faculty": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::faculty.faculty",
+      "inversedBy": "team_members"
+    },
+    "team_position": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::team-position.team-position",
+      "inversedBy": "team_members"
+    },
+    "show": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::show.show",
+      "inversedBy": "team_members"
+    },
+    "article": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::article.article",
+      "inversedBy": "team_members"
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "shows",
+  "info": {
+    "singularName": "show",
+    "pluralName": "shows",
+    "displayName": "Show",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "showName": {
+      "type": "string"
+    },
+    "showDescription": {
+      "type": "text"
+    },
+    "playlistShow": {
+      "type": "string"
+    },
+    "showHourStart": {
+      "type": "string"
+    },
+    "showHourEnd": {
+      "type": "string"
+    },
+    "days": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::day.day",
+      "mappedBy": "show"
+    },
+    "team_members": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::team-member.team-member",
+      "mappedBy": "show"
+    }
+  }
+}
