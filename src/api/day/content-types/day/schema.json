@@ -4,7 +4,8 @@
   "info": {
     "singularName": "day",
     "pluralName": "days",
-    "displayName": "Day"
+    "displayName": "Day",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -12,7 +13,9 @@
   "pluginOptions": {},
   "attributes": {
     "dayName": {
-      "type": "string"
+      "type": "string",
+      "required": true,
+      "unique": true
     },
     "show": {
       "type": "relation",

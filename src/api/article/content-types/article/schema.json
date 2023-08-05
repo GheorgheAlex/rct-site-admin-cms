@@ -13,7 +13,8 @@
   "pluginOptions": {},
   "attributes": {
     "articleTitle": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "articleCoverSource": {
       "type": "media",
@@ -32,11 +33,15 @@
       "target": "api::section.section",
       "inversedBy": "articles"
     },
+    "articlePublishDate": {
+      "type": "date",
+      "required": true
+    },
     "team_members": {
       "type": "relation",
-      "relation": "oneToMany",
+      "relation": "manyToMany",
       "target": "api::team-member.team-member",
-      "mappedBy": "article"
+      "mappedBy": "articles"
     }
   }
 }

@@ -4,7 +4,8 @@
   "info": {
     "singularName": "team-member",
     "pluralName": "team-members",
-    "displayName": "TeamMember"
+    "displayName": "TeamMember",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -12,17 +13,19 @@
   "pluginOptions": {},
   "attributes": {
     "teamMemberName": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "teamMemberImageSource": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "teamMemberInstagram": {
       "type": "string"
@@ -42,17 +45,20 @@
       "target": "api::team-position.team-position",
       "inversedBy": "team_members"
     },
-    "show": {
+    "shows": {
       "type": "relation",
-      "relation": "manyToOne",
+      "relation": "manyToMany",
       "target": "api::show.show",
       "inversedBy": "team_members"
     },
-    "article": {
+    "articles": {
       "type": "relation",
-      "relation": "manyToOne",
+      "relation": "manyToMany",
       "target": "api::article.article",
       "inversedBy": "team_members"
+    },
+    "teamMemberHobbies": {
+      "type": "text"
     }
   }
 }

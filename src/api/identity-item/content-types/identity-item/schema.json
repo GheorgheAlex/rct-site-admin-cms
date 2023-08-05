@@ -13,10 +13,13 @@
   "pluginOptions": {},
   "attributes": {
     "identityItemName": {
-      "type": "string"
+      "type": "string",
+      "required": true,
+      "unique": true
     },
     "identityItemValue": {
-      "type": "string"
+      "type": "string",
+      "required": true
     }
   }
 }

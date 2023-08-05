@@ -13,18 +13,13 @@
   "pluginOptions": {},
   "attributes": {
     "showName": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "showDescription": {
       "type": "text"
     },
     "playlistShow": {
-      "type": "string"
-    },
-    "showHourStart": {
-      "type": "string"
-    },
-    "showHourEnd": {
       "type": "string"
     },
     "days": {
@@ -33,11 +28,19 @@
       "target": "api::day.day",
       "mappedBy": "show"
     },
+    "showHourStart": {
+      "type": "time",
+      "required": true
+    },
+    "showHourEnd": {
+      "type": "time",
+      "required": true
+    },
     "team_members": {
       "type": "relation",
-      "relation": "oneToMany",
+      "relation": "manyToMany",
       "target": "api::team-member.team-member",
-      "mappedBy": "show"
+      "mappedBy": "shows"
     }
   }
 }
