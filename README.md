@@ -2,6 +2,8 @@
 
 ### **❗️Needed Node version `>18.6`**
 
+#### [💽 Database schema](https://lucid.app/lucidchart/eec18ddb-746e-459e-9657-7fd126655dab/edit?viewport_loc=-338%2C108%2C3328%2C1620%2C0_0&invitationId=inv_5fd7785e-8939-42ba-9064-e7c4625792d8)
+
 Strapi comes with a full featured [Command Line Interface](https://docs.strapi.io/developer-docs/latest/developer-resources/cli/CLI.html) (CLI) which lets you scaffold and manage your project in seconds.
 
 
