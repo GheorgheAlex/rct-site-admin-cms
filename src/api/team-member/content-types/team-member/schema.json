@@ -1,0 +1,64 @@
+{
+  "kind": "collectionType",
+  "collectionName": "team_members",
+  "info": {
+    "singularName": "team-member",
+    "pluralName": "team-members",
+    "displayName": "TeamMember",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "teamMemberName": {
+      "type": "string",
+      "required": true
+    },
+    "teamMemberImageSource": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "teamMemberInstagram": {
+      "type": "string"
+    },
+    "teamMemberQuote": {
+      "type": "text"
+    },
+    "faculty": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::faculty.faculty",
+      "inversedBy": "team_members"
+    },
+    "team_position": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::team-position.team-position",
+      "inversedBy": "team_members"
+    },
+    "shows": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::show.show",
+      "inversedBy": "team_members"
+    },
+    "articles": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::article.article",
+      "inversedBy": "team_members"
+    },
+    "teamMemberHobbies": {
+      "type": "text"
+    }
+  }
+}
